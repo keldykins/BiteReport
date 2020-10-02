@@ -6,18 +6,20 @@ review_id INTEGER(50),
 
 restaurant_name VARCHAR(50),
 
-review VARCHAR(300)
+review VARCHAR(300),
+
+time_stamp NOW()
 
 );
 
 INSERT INTO reviews (review_id, restaurant_name, review)
-VALUES ("1", "Maggianos", "The chicken parmesean was delicious.  Great atmosphere for a family outing");
+VALUES ("1", "Maggianos", "We ordered the chicken parm and alfredo - It was really good");
 
 INSERT INTO reviews (review_id, restaurant_name, review)
-VALUES ("2", "Los Dos Portrillos", "Food was awesome and affordable.  Go check it out on Taco Tuesday!");
+VALUES ("2", "Los Dos Portrillos", "Ordered #15 (large combo), chile rellenos were great");
 
 INSERT INTO reviews (review_id, restaurant_name, review)
-VALUES ("3", "Shake Shack", "Insane burgers and even better shakes.  A little expensive though but worth it");
+VALUES ("3", "Shake Shack", "Great burgers, ");
 
 INSERT INTO reviews (review_id, restaurant_name, review)
 VALUES ("4", "Ocean Prime", "Had the filet and lettuce wedge...it was phenomenal!");
