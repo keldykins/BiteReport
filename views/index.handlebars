@@ -1,23 +1,23 @@
 <h1>Bite Report</h1>
 
-navbar
+<header>
+  <nav class="nav-wrapper">
+    <div class="navbar-header">
+      <a href="#" class="brand-logo"><i class="material-icons">home</i> BiteReport</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+    </ul>
+    </div>
+</nav>
+</header>
 
 <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
+  {{> reviews/viewreviews sleep=true}}
 </ul>
 
 <h2>Cats that are sleepy!</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
+  {{> reviews/addreview sleep=false}}
 </ul>
 
 <h2>Add a Cat</h2>
