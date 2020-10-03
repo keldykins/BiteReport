@@ -6,3 +6,47 @@ insert title field
 category select, ie drink, appetizer (idea for fd?)
 automated date
 text area
+
+
+<h2>Add Your Review</h2>
+{{!-- !-- Name of the resturant --! --}}
+<div class="row">
+    <div class="input-field col s6">
+        <input value="Restuarant Name" id="Restuarant" type="text" class="validate">
+        <label class="active" for="Restuarant">Restuarant Name</label>
+    </div>
+</div>
+
+{{!-- --Code REQUIRED FOR TEXTFIELD--
+ $(document).ready(function() {
+    M.updateTextFields();
+  }); --}}
+
+<div class="input-field col s12">
+    {{!-- !--Values here would correspond to table names/ids for the inputs--! --}}
+    <select>
+        <option value="" disabled selected>Choose your option</option>
+        <option value="1">Amazing</option>
+        <option value="2">I Could Eat it again</option>
+        <option value="3">Never Order This Garbage Again</option>
+    </select>
+    <label>Please Select a Rating for Your Meal</label>
+</div>
+
+<h2>Add any Meal Notes:</h2>
+<div class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                <label for="icon_prefix2">NOTES</label>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{{!-- --CODE REQUIRED TO RESIZE TEXT INPUT FIELD--
+ $('#textarea1').val('New Text');
+  M.textareaAutoResize($('#textarea1')); --}}
