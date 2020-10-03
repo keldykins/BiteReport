@@ -18,6 +18,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+//DB Connection
+require("./config/connection");
+
 //Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
