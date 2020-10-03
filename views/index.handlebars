@@ -1,2 +1,37 @@
-Logo 
+<img src="/Users/keldancundy/Documents/coding/projects/BiteReport/public/logo3.jpg" alt="logo">
 
+<header>
+  <nav class="nav-wrapper">
+    <div class="navbar-header">
+      <a href="#" class="brand-logo"><i class="material-icons">home</i> BiteReport</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<ul>
+  {{> reviews/login}}
+</ul>
+
+<h2>Cats that are sleepy!</h2>
+
+<ul>
+</ul>
+
+<h2>Add a Cat</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Cat Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="sleepy">Sleepy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div>
+
+  <button type="submit">Add Cat</button>
+</form>
