@@ -6,13 +6,19 @@
         <li><a href="writereviews">Write A Review</a></li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a id = "signup" href="/signup">Sign Up</a></li>
-        <li><a id = "login" href="/login">Log In</a></li>
+        <li><a id="signup" href="/signup">Sign Up</a></li>
+        <li><a id="login" href="/login">Log In</a></li>
       </ul>
     </div>
   </nav>
 </header>
-{{#if partial}}
+{{#if searchReviews}}
 <ul>
   {{> reviews/searchreviews}}
 </ul>
+{{/if}}
+{{#if login}}
+<ul>
+  {{> reviews/login}}
+</ul>
+{{/if}}

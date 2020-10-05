@@ -24,27 +24,16 @@ app.engine(
     defaultLayout: "main",
   })
 );
-app.get("/", (req, res) => {
-  //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
-  res.render("index");
-});
 app.set("view engine", "handlebars");
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.get("/signup", (req, res) => {
-  //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
-  res.render("index", {
-    partial: "signup"
-  });
-});
 
 //DB Connection
 require("./config/connection");
 
 //Requiring our routes
-// require("./routes/html-routes.js")(app);
-// require("./routes/api-routes.js")(app);
+require("./routes/view-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 //Syncing our database
 db.sequelize.sync().then(() => {
