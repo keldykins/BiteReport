@@ -1,28 +1,36 @@
+const axios = require("axios"); // can't use axios in frontend js, aka anything in public folder, you don't have access to node_modules in front end files
+// fine for backend
+// replace with either ajax or fetch
+
 function getRestaurantInfo() {
-    var restaurantName = $("#restaurant").val().trim();
+  var restaurantArray = $("#resName").val().trim().split(" ");
 
-    axios({
-        method: 'get',
-        url:'https://api.yelp.com/v3/businesses/' + restaurantName,
-        headers: {
-            Authorization: "Bearer QCPNgMJoAHDFaqXp6QER372FLORt7TDuWjMtQKDpNTS3-TXtuH-UjeeTQAFD8p5UdQcq_xDJ38GCUmAm_sN1iFiKVJhjCpCCoG6TOLMLyUNv8G951dHZ0yeEQpNvX3Yx" 
-        }
-    }).then(res => showOutput(res))
-    .catch(err => console.error(err));
-}
+  var restaurantLocationArray = $("#resLocation").val().trim().split(" ");
 
-function postRestaurantInfo() {
-    axios({
-        method: 'post',
-        data: {
-            name: '',
-            review_count: 0
-        }
-    }).then(res => showOutput(res))
-    .catch(err => console.error(err));
+  var restaurantResponse = [...restaurantArray, ...restaurantLocationArray];
+
+  var restaurantString = "";
+  restaurantResponse.forEach(function (x) {
+    restaurantString = restaurantString.concat(`${x}-`);
+  });
+  var resSliced = restaurantString.slice(0, -1);
+
+  axios({
+    method: "get",
+    url: "https://api.yelp.com/v3/businesses/" + resSliced,
+    headers: {
+      Authorization:
+        "Bearer QCPNgMJoAHDFaqXp6QER372FLORt7TDuWjMtQKDpNTS3-TXtuH-UjeeTQAFD8p5UdQcq_xDJ38GCUmAm_sN1iFiKVJhjCpCCoG6TOLMLyUNv8G951dHZ0yeEQpNvX3Yx",
+    },
+  })
+    .then((res) => showOutput(res))
+    .catch((err) => console.error(err));
 }
 
 function showOutput(res) {
-    document.getElementById('res').innerHTML = `
-    <h1> ${res.name} </h1>`
+  /*document.getElementById('res').innerHTML = `
+    <h1> ${res.name} </h1>`*/
+  //console.log(res.data);
 }
+
+getRestaurantInfo();
