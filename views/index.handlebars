@@ -1,37 +1,18 @@
-<img src="public/logo3.jpg" alt="logo">
-
 <header>
   <nav class="nav-wrapper">
     <div class="navbar-header">
-      <a href="#" class="brand-logo"><i class="material-icons">home</i> BiteReport</a>
+      <a href="#"><img src="public/logo3.jpg" class="brand-logo center" alt="logo"></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="writereviews">Write A Review</a></li>
+      </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a id = "signup" href="/signup">Sign Up</a></li>
+        <li><a id = "login" href="/login">Log In</a></li>
       </ul>
     </div>
   </nav>
 </header>
-
+{{#if partial}}
 <ul>
-  {{> reviews/login}}
+  {{> reviews/searchreviews}}
 </ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-</ul>
-
-<h2>Add a Cat</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
-
-  <button type="submit">Add Cat</button>
-</form>
