@@ -46,4 +46,14 @@ module.exports = function (app) {
       members: true,
     });
   });
+
+  app.get("/writereviews", (req, res) => {
+    res.render("index", {
+      login: false,
+      searchReviews: false,
+      signup: false,
+      members: false,
+      writeReviews: true,
+    })
+  })
 };
