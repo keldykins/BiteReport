@@ -19,7 +19,7 @@ loginForm.on("submit", event => {
 loginUser(userData.email, userData.password);
     emailInput.val("");
     passwordInput.val("");
-  });
+});
 function loginUser(email, password) {
     $.post("/api/login", {
         email: email,

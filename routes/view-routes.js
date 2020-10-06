@@ -82,6 +82,16 @@ module.exports = function (app) {
       addReview: true,
     });
   });
+
+  app.get("/writereviews", (req, res) => {
+    res.render("index", {
+      login: false,
+      searchReviews: false,
+      signup: false,
+      members: false,
+      writeReviews: true,
+    })
+  })
 };
 
 // having trouble trying to route to the addreview page from link on index navbar
