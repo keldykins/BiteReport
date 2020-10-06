@@ -9,9 +9,12 @@ module.exports = function (app) {
     }
     res.render("index", {
       login: false,
-      searchReviews: true,
+      logout: false,
       signup: false,
       members: false,
+      searchReviews: true,
+      viewReviews: false,
+      addReview: false,
     });
   });
 
@@ -22,9 +25,12 @@ module.exports = function (app) {
     }
     res.render("index", {
       login: true,
-      searchReviews: false,
+      logout: false,
       signup: false,
       members: false,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: false,
     });
   });
 
@@ -32,18 +38,50 @@ module.exports = function (app) {
     //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
     res.render("index", {
       login: false,
-      searchReviews: false,
+      logout: false,
       signup: true,
       members: false,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: false,
     });
   });
 
   app.get("/members", isAuthenticated, (req, res) => {
     res.render("index", {
       login: false,
-      searchReviews: false,
+      logout: false,
       signup: false,
       members: true,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: false,
+    });
+  });
+
+  app.get("/logout", isAuthenticated, (req, res) => {
+    res.render("index", {
+      login: false,
+      logout: true,
+      signup: false,
+      members: false,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: false,
+    });
+  });
+
+  app.get("/addreview", isAuthenticated, (req, res) => {
+    res.render("index", {
+      login: false,
+      logout: false,
+      signup: false,
+      members: false,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: true,
     });
   });
 };
+
+// having trouble trying to route to the addreview page from link on index navbar
