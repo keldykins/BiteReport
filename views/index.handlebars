@@ -3,7 +3,7 @@
     <div class="navbar-header">
       <a href="#"><img src="public/logo3.jpg" class="brand-logo center" alt="logo"></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="writereviews">Write A Review</a></li>
+        <li><a href="/writereviews">Write A Review</a></li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a id="signup" href="/signup">Sign Up</a></li>
@@ -17,8 +17,21 @@
   {{> reviews/searchreviews}}
 </ul>
 {{/if}}
+
 {{#if login}}
 <ul>
   {{> reviews/login}}
+</ul>
+{{/if}}
+
+{{#if writeReviews}}
+<ul>
+  {{> reviews/writereviews}}
+</ul>
+{{/if}}
+
+{{#if signup}}
+<ul>
+  {{> reviews/signup}}
 </ul>
 {{/if}}
