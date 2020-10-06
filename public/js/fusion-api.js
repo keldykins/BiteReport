@@ -35,8 +35,13 @@ function getRestaurantInfo() {
 
 function showOutput(res) {
 var searchResult = 
-`<h1>${res.name}</h1>
-<h5>Address: ${res.location.display_address}</h5>                   `
+`   <img src="${res.image_url}" alt="Restaurant" width="200" height="150">
+    <h1>${res.name}</h1>
+    <h5>Address: ${res.location.display_address}</h5>
+    <h5>Phone: ${res.display_phone}</h5>                
+    <button id="writeReview" resname="${res.name}">Write a Review</button>
+    <br><br>
+`
 
 $('#res').append(searchResult);
 };
@@ -45,5 +50,15 @@ $("#searchBtn").on("click", function (event) {
     event.preventDefault();
     getRestaurantInfo();
 });
+
+$("#writeReview").on("click", function (event) {
+    event.preventDefault();
+    console.log('click');
+    reviewRedirect();
+});
+
+function reviewRedirect() {
+    window.location.replace("/writereviews");
+}
 
 });
