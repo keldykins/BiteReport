@@ -54,6 +54,6 @@ module.exports = function (app) {
       signup: false,
       members: false,
       writeReviews: true,
-    })
-  })
+    });
+  });
 };

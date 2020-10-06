@@ -35,9 +35,12 @@ function getRestaurantInfo() {
 
 function showOutput(res) {
 var searchResult = 
-`<h1>${res.name}</h1>
-<h5>Address: ${res.location.display_address}</h5>                   
-<button id="writeReview">Write a Review</button>
+`   <img src="${res.image_url}" alt="Restaurant" width="200" height="150">
+    <h1>${res.name}</h1>
+    <h5>Address: ${res.location.display_address}</h5>
+    <h5>Phone: ${res.display_phone}</h5>                
+    <button id="writeReview" resname="${res.name}">Write a Review</button>
+    <br><br>
 `
 
 $('#res').append(searchResult);
