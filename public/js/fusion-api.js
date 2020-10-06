@@ -36,7 +36,9 @@ function getRestaurantInfo() {
 function showOutput(res) {
 var searchResult = 
 `<h1>${res.name}</h1>
-<h5>Address: ${res.location.display_address}</h5>                   `
+<h5>Address: ${res.location.display_address}</h5>                   
+<button id="writeReview">Write a Review</button>
+`
 
 $('#res').append(searchResult);
 };
@@ -45,5 +47,15 @@ $("#searchBtn").on("click", function (event) {
     event.preventDefault();
     getRestaurantInfo();
 });
+
+$("#writeReview").on("click", function (event) {
+    event.preventDefault();
+    console.log('click');
+    reviewRedirect();
+});
+
+function reviewRedirect() {
+    window.location.replace("/writereviews");
+}
 
 });
