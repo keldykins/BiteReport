@@ -25,7 +25,8 @@ module.exports = function (app) {
     }
     res.render("index", {
       login: true,
-      logout: false,
+      style: 'login.css',
+      searchReviews: false,
       signup: false,
       members: false,
       searchReviews: false,
@@ -38,7 +39,8 @@ module.exports = function (app) {
     //Serves the body of the page aka "main.handlebars" to the container //aka "index.handlebars"
     res.render("index", {
       login: false,
-      logout: false,
+      style: 'signup.css',
+      searchReviews: false,
       signup: true,
       members: false,
       searchReviews: false,
@@ -50,7 +52,8 @@ module.exports = function (app) {
   app.get("/members", isAuthenticated, (req, res) => {
     res.render("index", {
       login: false,
-      logout: false,
+      style: 'members.css',
+      searchReviews: false,
       signup: false,
       members: true,
       searchReviews: false,
@@ -83,15 +86,17 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/writereviews", (req, res) => {
+  app.get("/:restaurant", (req, res) => {
     res.render("index", {
       login: false,
+      style: 'writereviews.css',
       searchReviews: false,
       signup: false,
       members: false,
       writeReviews: true,
-    })
-  })
+      restaurantName: req.params.restaurant
+    });
+  });
 };
 
 // having trouble trying to route to the addreview page from link on index navbar
