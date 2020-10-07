@@ -50,7 +50,7 @@ module.exports = function (app) {
       });
     }
   });
- 
+
     // POST route for saving a new post
     app.post("/api/reviews", function(req, res) {
         console.log(req.body);
