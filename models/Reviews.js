@@ -2,19 +2,19 @@ const Sequelize = require("sequelize");
 const sequelize = require("../config/connection.js");
 
 module.exports = function (sequelize, DataTypes) {
-var Reviews = sequelize.define("reviews", {
+var Reviews = sequelize.define("Reviews", {
     restaurant_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [2, 10],
+            len: [2, 30],
         }
     },
     item_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [2, 10]
+            len: [2, 30]
         }
     },
     item_price: {
