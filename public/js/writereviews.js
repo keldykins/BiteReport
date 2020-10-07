@@ -1,12 +1,9 @@
-// var login = document.querySelector("#login")
+var restName = $("#rest-name").val()
+var restauratNames = restName.split("-").filter(x => x !== "-").join(" ")
+$("#rest-name").val(restauratNames);
 
-// login.addEventListener("click", function(){
-    
-// })
 
-$(document).ready(function() {
-
-    var restInput = $("#rest-name");
+var restInput = $("#rest-name");
     var itemInput = $("#item-name");
     var priceInput = $("#price");
     var ratingInput = $("#rating");
@@ -14,25 +11,24 @@ $(document).ready(function() {
     var submitButton = $("#submit-review")
 
 
-    $(submitButton).on("click", createPost);
-    console.log(submitButton + " was clicked");
+    $(submitButton).on("submit", createPost);
 
     function createPost(event) {
         event.preventDefault();
         // Wont submit the post if we are missing any restaurant information from the form
         if (!restInput.val().trim() || !itemInput.val().trim() || !priceInput.val() || !ratingInput.val().trim() || !reviewInput.val().trim()) {
-          return;
+            return;
         }
         // Constructing a newPost object to hand to the database
         var newPost = {
-          restaurant_name: restInput
+            restaurant_name: restInput
             .val()
             .trim(),
-          item_name: itemInput
+            item_name: itemInput
             .val()
             .trim(),
-          item_price: priceInput.val(),
-          rating: ratingInput
+            item_price: priceInput.val(),
+            rating: ratingInput
             .val()
             .trim(),
             review: reviewInput
@@ -40,17 +36,13 @@ $(document).ready(function() {
             .trim()
 
         };
-    
-       
-        
-          submitPost(newPost);
+        submitPost(newPost);
         
         }
     
       // Submits a new post and brings user to reviews page upon completion
-      function submitPost(post) {
+        function submitPost(post) {
         $.post("/api/reviews", post, function() {
-          window.location.href = "/reviews";
+            window.location.href = "/reviews";
         });
-      }
-  });
+    };
