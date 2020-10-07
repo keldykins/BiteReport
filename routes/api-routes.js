@@ -7,12 +7,14 @@ module.exports = function (app) {
       email: req.user.email,
       id: req.user.id,
     });
+
   });
 
   app.post("/api/signup", (req, res) => {
     db.User.create({
       email: req.body.email,
       password: req.body.password,
+      
     })
       .then(() => {
         res.redirect(307, "/api/login");
@@ -39,11 +41,12 @@ module.exports = function (app) {
           where: query
         }).then(function(dbReviews) {
           res.json(dbReviews);
+          console.log(res);
         });
       });
     
-  app.get("/api/user_data", (req, res) => {
-    if (!req.user) {
+    app.get("/api/user_data", (req, res) => {
+        if (!req.user) {
       res.json({});
     } else {
       res.json({
@@ -60,17 +63,17 @@ module.exports = function (app) {
         res.json(dbReviews);
       });
     });
-};
+
   
     // DELETE route for deleting posts
-    // app.delete("/api/posts/:id", function(req, res) {
-    //   db.Post.destroy({
-    //     where: {
-    //       id: req.params.id
-    //     }
-    //   }).then(function(dbPost) {
-    //     res.json(dbPost);
-    //   });
-    // });
-
+    app.delete("/api/reviews/:id", function(req, res) {
+      db.Reviews.destroy({
+        where: {
+          id: req.params.id
+        }
+      }).then(function(dbReviews) {
+        res.json(dbReviews);
+      });
+    });
+}   
 
