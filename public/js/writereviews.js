@@ -1,6 +1,6 @@
 var restName = $("#rest-name").val()
 if (restName !== undefined ) {
-    var restaurantNames = restName.split("-").filter(x => x !== "-").join(" ")
+  var restaurantNames = restName.split("-").filter(x => x !== "-").join(" ")
 $("#rest-name").val(restaurantNames);
 }
 
@@ -40,13 +40,26 @@ $("#rest-name").val(restaurantNames);
         event.preventDefault();
         console.log("I clicked on all reviews button" );
         
-          $.get("/api/reviews", function(data) {
+        var restaurantNames = restName.split("-").filter(x => x !== "-").join(" ")
+        $("#rest-name").val(restaurantNames);
+        console.log(restaurantNames);
+          $.get(`/api/reviews/${restaurantNames}`, function(data) {
             console.log(data);
             var allReviews = [];
             for (var i = 0; i < data.length; i++) {
-              allReviews.push(data);
+              allReviews.push(data[i]);
             }
-            $("#showReviews").append(allReviews);
+            var showReviews = JSON.stringify(allReviews);
+            /*var noReviews = `
+            <h5>There are no previous reviews for this restaurant.</h5>
+            `*/
+            $("#showReviews").append(showReviews);
+
+            //if(data[0].restaurant_name ===  ) {
+            //$("#showReviews").append(showReviews);
+            //} else {
+            //$("#showReviews").append(noReviews);
+            //}
       });
     });
       
