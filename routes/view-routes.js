@@ -50,7 +50,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/writereviews", (req, res) => {
+  app.get("/:restaurant", (req, res) => {
     res.render("index", {
       login: false,
       style: 'writereviews.css',
@@ -58,6 +58,7 @@ module.exports = function (app) {
       signup: false,
       members: false,
       writeReviews: true,
+      restaurantName: req.params.restaurant
     });
   });
 };
