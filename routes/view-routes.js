@@ -9,9 +9,12 @@ module.exports = function (app) {
     }
     res.render("index", {
       login: false,
-      searchReviews: true,
+      logout: false,
       signup: false,
       members: false,
+      searchReviews: true,
+      viewReviews: false,
+      addReview: false,
     });
   });
 
@@ -26,6 +29,9 @@ module.exports = function (app) {
       searchReviews: false,
       signup: false,
       members: false,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: false,
     });
   });
 
@@ -37,6 +43,9 @@ module.exports = function (app) {
       searchReviews: false,
       signup: true,
       members: false,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: false,
     });
   });
 
@@ -47,6 +56,33 @@ module.exports = function (app) {
       searchReviews: false,
       signup: false,
       members: true,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: false,
+    });
+  });
+
+  app.get("/logout", isAuthenticated, (req, res) => {
+    res.render("index", {
+      login: false,
+      logout: true,
+      signup: false,
+      members: false,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: false,
+    });
+  });
+
+  app.get("/addreview", isAuthenticated, (req, res) => {
+    res.render("index", {
+      login: false,
+      logout: false,
+      signup: false,
+      members: false,
+      searchReviews: false,
+      viewReviews: false,
+      addReview: true,
     });
   });
 
@@ -62,3 +98,5 @@ module.exports = function (app) {
     });
   });
 };
+
+// having trouble trying to route to the addreview page from link on index navbar
