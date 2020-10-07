@@ -70,5 +70,16 @@ module.exports = function (app) {
         res.json(dbReviews);
       });
     });
+
+    app.get("/api/reviews/:restaurantNames", function(req, res) {
+      console.log(req.params.restaurantNames);
+      db.Reviews.findAll({
+        where: {
+          restaurant_name: req.params.restaurantNames
+        }
+      }).then(function(dbReviews) {
+        res.json(dbReviews);
+      });
+    });
 }   
 
