@@ -37,23 +37,19 @@ $("#rest-name").val(restaurantNames);
     // -----------event listener and function to view all reviews-----
 
     $("#all-reviews").on("click", function(event) {
+        event.preventDefault();
         console.log("I clicked on all reviews button" );
         
-        allReviews();
+          $.get("/api/reviews", function(data) {
+            console.log(data);
+            var allReviews = [];
+            for (var i = 0; i < data.length; i++) {
+              allReviews.push(data);
+            }
+            $("#showReviews").append(allReviews);
+      });
     });
-
-
-    function allReviews() {
-        $.get("/api/reviews", function(data) {
-          var allReviews = [];
-          for (var i = 0; i < data.length; i++) {
-            allReviews.push(viewReviews);
-          }
-        });
-    };
- 
-    
-      // Submits a new post and brings user to reviews page upon completion
+      
         function submitPost(post) {
         $.post("/api/reviews", post).done(function(res) {
             console.log(res);

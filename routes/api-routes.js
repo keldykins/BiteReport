@@ -33,12 +33,7 @@ module.exports = function (app) {
 
     // GET route for getting all of the posts
     app.get("/api/reviews", function(req, res) {
-        var query = {};
-      //   if (req.query.id) {
-      //     query.AuthorId = req.query.author_id;
-      //   }
         db.Reviews.findAll({
-          where: query
         }).then(function(dbReviews) {
           res.json(dbReviews);
           console.log(res);

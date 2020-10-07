@@ -41,13 +41,16 @@ function showOutput(res) {
 var wholeName = res.name.split(" ")
 var varHyp = addHyp(wholeName);
 var searchResult = 
-`   <img src="${res.image_url}" alt="Restaurant" width="200" height="150">
+`   <div class="z-depth-4 eachResult">
+    <img src="${res.image_url}" alt="Restaurant" width="200" height="150">
     <h1>${res.name}</h1>
     <h5>Address: ${res.location.display_address}</h5>
     <h5>Phone: ${res.display_phone}</h5>
-    <a href="http://localhost:8080/${varHyp}">               
-    <button class="writeReview">Write a Review</button>
+    <a href="http://localhost:8080/${varHyp}">
+    <br>               
+    <button class="waves-effect waves-light btn writeReview">Write a Review</button>
     </a>
+    </div>
     <br><br>
 `
 

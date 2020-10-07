@@ -3,6 +3,11 @@ nav {
     font-size: 30px;
 }
 
+.eachResult {
+    background-color: rgb(59, 78, 114);
+    padding: 1.5rem;
+}
+
 body {
     background-color: rgb(252, 233, 233);
 }
