@@ -52,13 +52,13 @@ module.exports = function (app) {
       });
     }
   });
-}; 
-    // POST route for saving a new post
     app.post("/api/reviews", function(req, res) {
-      db.Reviews.create(req.body).then(function(dbPost) {
-        res.json(dbPost);
+        console.log(req.body);
+      db.Reviews.create(req.body).then(function(dbReviews) {
+        res.json(dbReviews);
       });
     });
+};
   
     // DELETE route for deleting posts
     // app.delete("/api/posts/:id", function(req, res) {
