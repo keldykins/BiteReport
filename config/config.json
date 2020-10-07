@@ -1,9 +1,7 @@
 {
   "development": {
     "username": "root",
-
-    "password": "M@rif3fa",
-
+    "password": "password",
     "database": "rest_reviewsdb",
     "host": "127.0.0.1",
     "port": 3306,
