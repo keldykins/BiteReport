@@ -47,13 +47,14 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/writereviews", (req, res) => {
+  app.get("/:restaurant", (req, res) => {
     res.render("index", {
       login: false,
       searchReviews: false,
       signup: false,
       members: false,
       writeReviews: true,
+      restaurantName: req.params.restaurant
     });
   });
 };

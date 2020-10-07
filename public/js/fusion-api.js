@@ -2,20 +2,23 @@ $(document).ready(() => {
 
 var baseUrl = "https://cors-anywhere.herokuapp.com/http://api.yelp.com/v3/businesses/";
 
+function addHyp(arr) {
+    var restaurantString = "";
+    arr.forEach(function (x) {
+    restaurantString = restaurantString.concat(`${x}-`);
+});    
+    var resSliced = restaurantString.slice(0, -1);
+    return resSliced;
+};
+
 function getRestaurantInfo() {
 
     var restaurantArray = $("#resName").val().trim().split(" ");
     var restaurantLocationArray = $("#resLocation").val().trim().split(" ");
     var restaurantResponse = [...restaurantArray, ...restaurantLocationArray];
-    
-    var restaurantString = "";
-    let finalUrl;
-    restaurantResponse.forEach(function (x) {
-    restaurantString = restaurantString.concat(`${x}-`);
-
-    var resSliced = restaurantString.slice(0, -1);
-    finalUrl = baseUrl + resSliced;
-    })
+    var varHyp = addHyp(restaurantResponse);
+    console.log(varHyp);
+    finalUrl = baseUrl + varHyp;
 
     $.ajax({
         type: "GET",
@@ -33,17 +36,22 @@ function getRestaurantInfo() {
 };
 
 
+
 function showOutput(res) {
+var wholeName = res.name.split(" ")
+var varHyp = addHyp(wholeName);
 var searchResult = 
 `   <img src="${res.image_url}" alt="Restaurant" width="200" height="150">
     <h1>${res.name}</h1>
     <h5>Address: ${res.location.display_address}</h5>
-    <h5>Phone: ${res.display_phone}</h5>                
-    <button id="writeReview" resname="${res.name}">Write a Review</button>
+    <h5>Phone: ${res.display_phone}</h5>
+    <a href="http://localhost:8080/${varHyp}">               
+    <button class="writeReview">Write a Review</button>
+    </a>
     <br><br>
 `
 
-$('#res').append(searchResult);
+$('#res').prepend(searchResult);
 };
 
 $("#searchBtn").on("click", function (event) {
@@ -51,14 +59,15 @@ $("#searchBtn").on("click", function (event) {
     getRestaurantInfo();
 });
 
-$("#writeReview").on("click", function (event) {
+/*$(".writeReview").on("click", function (event) {
     event.preventDefault();
     console.log('click');
-    reviewRedirect();
+    reviewRedirect(this.resname);
 });
 
-function reviewRedirect() {
-    window.location.replace("/writereviews");
-}
+function reviewRedirect(name) {
+
+    window.location.replace(`https://localhost:8080/writereviews/${name}`);
+}*/
 
 });
