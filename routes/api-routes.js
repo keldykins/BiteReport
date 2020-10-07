@@ -78,11 +78,7 @@ module.exports = function (app) {
           restaurant_name: req.params.restaurantNames
         }
       }).then(function(dbReviews) {
-        res.render("index", {
-          viewreviews: false,
-          writerevies: true,
-          dbReviews: dbReviews
-        });
+        res.json(dbReviews);
       });
     });
 }   
