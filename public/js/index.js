@@ -15,6 +15,7 @@ $(document).ready(function() {
 
 
     $(submitButton).on("click", createPost);
+    console.log(submitButton + " was clicked");
 
     function createPost(event) {
         event.preventDefault();
@@ -52,5 +53,4 @@ $(document).ready(function() {
           window.location.href = "/reviews";
         });
       }
-    }
-});
+  });
