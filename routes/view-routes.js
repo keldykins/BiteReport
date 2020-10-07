@@ -18,11 +18,15 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/login", (req, res) => {
+  app.post("/login", (req, res) => {
     // If the user already has an account send them to the members page
+
     if (req.user) {
+      
       res.redirect("index");
+      
     }
+    console.log(req.user);
     res.render("index", {
       login: true,
       style: 'login.css',
@@ -33,6 +37,7 @@ module.exports = function (app) {
       viewReviews: false,
       addReview: false,
     });
+  
   });
 
   app.get("/signup", (req, res) => {
@@ -55,7 +60,7 @@ module.exports = function (app) {
       style: 'members.css',
       searchReviews: false,
       signup: false,
-      members: true,
+      members: false,
       searchReviews: false,
       viewReviews: false,
       addReview: false,
@@ -99,4 +104,4 @@ module.exports = function (app) {
   });
 };
 
-// having trouble trying to route to the addreview page from link on index navbar
+
