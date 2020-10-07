@@ -12,6 +12,7 @@ module.exports = function (app) {
       logout: false,
       signup: false,
       members: false,
+      style: 'searchreviews.css',
       searchReviews: true,
       viewReviews: false,
       addReview: false,
@@ -24,18 +25,14 @@ module.exports = function (app) {
     if (req.user) {
       
       res.redirect("index");
-      
     }
-    console.log(req.user);
     res.render("index", {
       login: true,
       style: 'login.css',
       searchReviews: false,
       signup: false,
       members: false,
-      searchReviews: false,
-      viewReviews: false,
-      addReview: false,
+      searchReviews: false
     });
   
   });
@@ -60,7 +57,7 @@ module.exports = function (app) {
       style: 'members.css',
       searchReviews: false,
       signup: false,
-      members: false,
+      members: true,
       searchReviews: false,
       viewReviews: false,
       addReview: false,

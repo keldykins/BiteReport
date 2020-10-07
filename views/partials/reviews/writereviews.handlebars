@@ -7,47 +7,48 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s4">
-<input value={{restaurantName}} placeholder="Restaurant Name" id="rest-name" type="text" class="validate">
+
+          <input value={{restaurantName}} placeholder="Restaurant Name" id="rest-name" type="text" class="validate">
           <label for="rest-name"></label>
+
         </div>
         <div class="input-field col s6">
           <input placeholder="Item Name" id="item-name" type="text" class="validate">
           <label for="item-name"></label>
         </div>
-      </div>
-      
+    </div>
     
-        <div class="input-field col s4">
-          <input placeholder="Price" id="price" type="text" class="validate">
-          <label for="price"></label>
+        <div class="input-field col s3">
+            <input placeholder="Price" id="price" type="text" class="validate">
+            <label for="price"></label>
         </div>
-        <div class="input-field col s4">
-          <input placeholder="Would you eat this again?" id="rating" type="text" class="validate">
-          <label for="rating"></label>
+
+        <div class="input-field col s3">
+            <input placeholder="Would you eat this again?" id="rating" type="text" class="validate">
+            <label for="rating"></label>
         </div>
     
-      
     
 
-      </div>
+    </div>
 
-      <div class="row">
+    <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Write your review here!"id="review" type="text" class="validate">
-          <label for="review"></label>
+        <input placeholder="Write your review here!"id="review" type="text" class="validate">
+        <label for="review"></label>
         </div>
-      </div>
-      
+    </div>
     </form>
     <button class="btn waves-effect waves-light" id="submit-review" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
-  </button>
+    </button>
+    <button class="btn waves-effect waves-light" id="all-reviews" type="submit" name="action">View all Reviews
+    <i class="material-icons right">send</i>
+    </button>
+    </div>
+    <div id="showReviews">
 
-  <button class="btn waves-effect waves-light" id="all-reviews" type="submit" name="action">See All Reviews<i class="material-icons right">send</i>
-  </button>
-
-  </div>
-
-   
+    </div>
 </div>
 <script src="/js/writereviews.js"></script>
+
