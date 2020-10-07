@@ -1,4 +1,4 @@
-var restName = $("#rest-name")
+var restName = $("#rest-name").val()
 var restauratNames = restName.split("-").filter(x => x !== "-").join(" ")
 $("#rest-name").val(restauratNames);
 
@@ -41,8 +41,8 @@ var restInput = $("#rest-name");
         }
     
       // Submits a new post and brings user to reviews page upon completion
-      function submitPost(post) {
+        function submitPost(post) {
         $.post("/api/reviews", post, function() {
-          window.location.href = "/reviews";
+            window.location.href = "/reviews";
         });
     };
