@@ -3,7 +3,7 @@ var restauratNames = restName.split("-").filter(x => x !== "-").join(" ")
 $("#rest-name").val(restauratNames);
 
 
-var restInput = $("#rest-name");
+    var restInput = $("#rest-name");
     var itemInput = $("#item-name");
     var priceInput = $("#price");
     var ratingInput = $("#rating");
@@ -21,19 +21,11 @@ var restInput = $("#rest-name");
         }
         // Constructing a newPost object to hand to the database
         var newPost = {
-            restaurant_name: restInput
-            .val()
-            .trim(),
-            item_name: itemInput
-            .val()
-            .trim(),
+            restaurant_name: restInput.val().trim(),
+            item_name: itemInput.val().trim(),
             item_price: priceInput.val(),
-            rating: ratingInput
-            .val()
-            .trim(),
-            review: reviewInput
-            .val()
-            .trim()
+            rating: ratingInput.val().trim(),
+            review: reviewInput.val().trim()
 
         };
         submitPost(newPost);
