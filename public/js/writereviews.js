@@ -1,8 +1,8 @@
 var restName = $("#rest-name").val()
 if (restName !== undefined ) {
   var restaurantNames = restName.split("-").filter(x => x !== "-").join(" ")
-$("#rest-name").val(restaurantNames);
-}
+         $("#rest-name").val(restaurantNames);
+        }
 
 
 
@@ -13,10 +13,12 @@ $("#rest-name").val(restaurantNames);
     var reviewInput = $("#review");
     var submitButton = $("#submit-review");
     var viewReviews = $("#all-reviews");
+   
+   
 
 // ------event listener and function to submit new review -----------
     $(submitButton).on("click", function(event) {
-        console.log("I clicked on " + submitButton);
+        
         console.log(event);
         createPost();
     });
@@ -38,7 +40,7 @@ $("#rest-name").val(restaurantNames);
 
     $("#all-reviews").on("click", function(event) {
         event.preventDefault();
-        console.log("I clicked on all reviews button" );
+        
         
         var restaurantNames = restName.split("-").filter(x => x !== "-").join(" ")
         $("#rest-name").val(restaurantNames);
@@ -53,7 +55,7 @@ $("#rest-name").val(restaurantNames);
             showReviews = `
             <div class="wrapper">
               <div class="allreviews">
-              <div class="allResults">
+              <div class="allResults" id= 1>
                 <h5>${restaurantNames}</h5>
                 <p>
                 Item: ${data[0].item_name}<br>
@@ -63,8 +65,11 @@ $("#rest-name").val(restaurantNames);
                 ${data[0].review}
                 </p>
               </div>
-
-            <div class="allResults">
+               
+              <button id="delete-button1" id=1>Delete Post</button>
+              <br>
+              <br>
+            <div class="allResults" id=2>
             <h5>${restaurantNames}</h5>
             <p>
             Item: ${data[1].item_name}<br>
@@ -73,9 +78,15 @@ $("#rest-name").val(restaurantNames);
             Review: <br>
             ${data[1].review}
             </p>
+            
             </div>
 
-            <div class="allResults">
+            <button id="delete-button2">Delete Post</button>
+            
+            
+            <br>
+            <br>
+            <div class="allResults" id=3>
             <h5>${restaurantNames}</h5>
             <p>
             Item: ${data[2].item_name}<br>
@@ -85,17 +96,22 @@ $("#rest-name").val(restaurantNames);
             ${data[2].review}
             </p>
             </div>
+
+        
+            <button id="delete-button3">Delete Post</button>
+            <br>
+            <br>
             </div>
             </div>
             `
 
             $("#showReviews").prepend(showReviews);
 
-            //if(data[0].restaurant_name ===  ) {
-            //$("#showReviews").append(showReviews);
-            //} else {
-            //$("#showReviews").append(noReviews);
-            //}
+            if(data[0].restaurant_name === restaurantNames ) {
+            $("#showReviews").append(showReviews);
+            } else {
+            $("#showReviews").append(noReviews);
+            }
       });
     });
       
@@ -108,3 +124,15 @@ $("#rest-name").val(restaurantNames);
             // handleLoginErr(err);
           })
     };
+// -------------- delete button click event and function to send ajax delete request to DB--------
+
+$("#delete-button1").on("click", 'button', function(event) {
+    console.log("I clicked on the del button")
+    // console.log(event);
+    // let id = event.parent.id
+    // $(`#${id}`).remove();
+    // $.ajax({
+    //     method: "GET",
+    //     url: "/api/delete/" + id
+    //   }).then(showReviews)
+  });
