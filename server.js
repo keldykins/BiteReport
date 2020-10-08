@@ -6,7 +6,7 @@ const favicon = require('serve-favicon');
 //Passport required as we've configured it
 const passport = require("./config/passport");
 //Setting up PORT
-const PORT = process.env.DATABASE_URL || 8080;
+const PORT = process.env.PORT || 8080;
 
 const db = require("./models");
 //Creating express app and configuring middleware
