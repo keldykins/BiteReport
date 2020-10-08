@@ -7,14 +7,14 @@ var Reviews = sequelize.define("Reviews", {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [2, 30],
+            len: [2, 100],
         }
     },
     item_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [2, 30]
+            len: [2, 100],
         }
     },
     item_price: {

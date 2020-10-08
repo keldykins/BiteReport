@@ -6,3 +6,21 @@ nav {
 body {
     background-color: rgb(252, 233, 233);
 }
+
+.wrapper {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.allreviews {
+    font-weight: bold;
+}
+
+.allResults {
+    background-color: rgb(59, 78, 114);
+    padding-left: 10px;
+    padding-right: 10px;
+}
