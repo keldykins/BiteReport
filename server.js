@@ -2,6 +2,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const session = require("express-session");
+const favicon = require('serve-favicon');
 //Passport required as we've configured it
 const passport = require("./config/passport");
 //Setting up PORT
@@ -15,14 +16,14 @@ app.use(express.json());
 app.use(express.static("public"));
 //Session keeps track of our user's login status
 app.use(
-  session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
+    session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
 //Sets handlebars configurations (we will go through them later on)
 app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main",
-  })
+    "handlebars",
+    exphbs({
+        defaultLayout: "main",
+    })
 );
 app.set("view engine", "handlebars");
 app.use(passport.initialize());
@@ -37,7 +38,7 @@ require("./routes/api-routes.js")(app);
 
 //Syncing our database
 db.sequelize.sync().then(() => {
-  app.listen(PORT, () => {
-    console.log("Listening on port: " + PORT, PORT, PORT);
-  });
+    app.listen(PORT, () => {
+        console.log("Listening on port: " + PORT, PORT, PORT);
+    });
 });
