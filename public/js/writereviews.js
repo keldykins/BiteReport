@@ -50,10 +50,46 @@ $("#rest-name").val(restaurantNames);
               allReviews.push(data[i]);
             }
             var showReviews = JSON.stringify(allReviews);
-            /*var noReviews = `
-            <h5>There are no previous reviews for this restaurant.</h5>
-            `*/
-            $("#showReviews").append(showReviews);
+            showReviews = `
+            <div class="wrapper">
+              <div class="allreviews">
+              <div class="allResults">
+                <h5>${restaurantNames}</h5>
+                <p>
+                Item: ${data[0].item_name}<br>
+                Price: $${data[0].item_price}<br>
+                Would you eat this again?: ${data[0].rating}<br>
+                Review: <br>
+                ${data[0].review}
+                </p>
+              </div>
+
+            <div class="allResults">
+            <h5>${restaurantNames}</h5>
+            <p>
+            Item: ${data[1].item_name}<br>
+            Price: $${data[1].item_price}<br>
+            Would you eat this again?: ${data[1].rating}<br>
+            Review: <br>
+            ${data[1].review}
+            </p>
+            </div>
+
+            <div class="allResults">
+            <h5>${restaurantNames}</h5>
+            <p>
+            Item: ${data[2].item_name}<br>
+            Price: $${data[2].item_price}<br>
+            Would you eat this again?: ${data[2].rating}<br>
+            Review: <br>
+            ${data[2].review}
+            </p>
+            </div>
+            </div>
+            </div>
+            `
+
+            $("#showReviews").prepend(showReviews);
 
             //if(data[0].restaurant_name ===  ) {
             //$("#showReviews").append(showReviews);
