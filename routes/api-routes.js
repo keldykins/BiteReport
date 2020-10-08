@@ -61,15 +61,16 @@ module.exports = function (app) {
 
   
     // DELETE route for deleting posts
-    app.delete("/api/reviews/:id", function(req, res) {
-      db.Reviews.destroy({
-        where: {
-          id: req.params.id
-        }
-      }).then(function(dbReviews) {
-        res.json(dbReviews);
+    app.get("/api/delete/:id", function(req, res) {
+        console.log(req.params.id)
+        db.Reviews.destroy({
+          where: {
+            id: req.params.id
+          }
+        }).then(function(dbReviews) {
+          res.json(dbReviews);
+        });
       });
-    });
 
     app.get("/api/reviews/:restaurantNames", function(req, res) {
       console.log(req.params.restaurantNames);
