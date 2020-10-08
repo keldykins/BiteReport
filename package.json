@@ -1,36 +1,42 @@
 {
-  "name": "BiteReport",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "axios": "^0.20.0",
-    "bcryptjs": "^2.4.3",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.1.0",
-    "express-session": "^1.17.1",
-    "fs": "0.0.1-security",
-    "mysql2": "^2.2.5",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
-    "path": "^0.12.7",
-    "sequelize": "^6.3.5",
-    "yelp-fusion": "^3.0.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrclaudiogallo/BiteReport.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mrclaudiogallo/BiteReport/issues"
-  },
-  "homepage": "https://github.com/mrclaudiogallo/BiteReport#readme"
+    "name": "project2",
+    "version": "1.0.0",
+    "description": "",
+    "engines": {
+        "node": "12.19.0"
+    },
+    "main": "server.js",
+    "dependencies": {
+        "axios": "^0.20.0",
+        "bcryptjs": "^2.4.3",
+        "express": "^4.17.1",
+        "express-handlebars": "^5.1.0",
+        "express-session": "^1.17.1",
+        "connect-pg-simple": "^6.2.1",
+        "fs": "0.0.1-security",
+        "mysql2": "^2.2.5",
+        "nodemon": "^2.0.4",
+        "passport": "^0.4.1",
+        "passport-local": "^1.0.0",
+        "path": "^0.12.7",
+        "sequelize": "^6.3.5",
+        "serve-favicon": "^2.5.0",
+        "yelp-fusion": "^3.0.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GabrielleM45/Project2"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GabrielleM45/Project2/issues"
+    },
+    "homepage": "https://github.com/GabrielleM45/Project2/blob/main/README.md"
 }

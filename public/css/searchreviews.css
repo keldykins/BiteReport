@@ -1,13 +1,32 @@
-nav {
-    background-color:#FFA200;
-    font-size: 30px;
-}
-
-.eachResult {
-    background-color: rgb(59, 78, 114);
-    padding: 1.5rem;
-}
-
-body {
-    background-color: rgb(252, 233, 233);
-}
+    nav {
+        background-color: #FFA200;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    i.material-icons {
+        width: 65px;
+        height: 97px;
+        font-size: 28px;
+    }
+    
+    #signup,
+    #login {
+        font-size: 18px;
+    }
+    
+    img.brand-logo {
+        width: 90px;
+        height: 62px;
+    }
+    
+    .eachResult {
+        background-color: #005b7f!important;
+        padding: 1.5rem;
+        font-family: 'Noto Sans JP, sans-serif';
+        box-shadow: 0 8px 16px 5px rgb(217, 240, 248), 0 6px 20px 5px rgba(192, 216, 247, 0.637);
+    }
+    
+    body {
+        background-color: #f5f5f4;
+        font-family: 'Noto Sans JP, sans-serif';
+    }
