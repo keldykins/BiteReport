@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "M@rif3fa",
+    "username": "wpqkqigz9hydyr7i",
+    "password": "aqlmyhs4u335do4n",
     "database": "rest_reviewsdb",
-    "host": "127.0.0.1",
+    "host": "durvbryvdw2sjcm5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   },
@@ -21,6 +21,7 @@
     "database": "database_production",
     "host": "127.0.0.1",
     "port": 3306,
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
