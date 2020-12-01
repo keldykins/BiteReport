@@ -9,9 +9,7 @@ App for leaving reviews regarding a restaurant and its menu items.
 ## Authors:
 Claudion Gallo, Jake Haberle, Metasabeya Ketsela, Keldan Cundy, Gabrielle Maxey
 
-![](http://i.imgur.com/VlgBKQ9.png)Email:
-
-![](http://i.imgur.com/9I6NRUm.png)Github: mrclaudiogallo GabrielleM45 jhaberle metasabeya keldykins>
+![](http://i.imgur.com/9I6NRUm.png): mrclaudiogallo GabrielleM45 jhaberle metasabeya keldykins>
 
 ## License
   
