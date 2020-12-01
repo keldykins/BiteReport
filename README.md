@@ -9,13 +9,16 @@ App for leaving reviews regarding a restaurant and its menu items.
 https://bitereport.herokuapp.com/
 
 ## Authors:
-Jake Haberle, Metasabeya Ketsela, Keldan Cundy, Gabrielle Maxey
 
 ![](http://i.imgur.com/9I6NRUm.png)
 Claudion Gallo: @mrclaudiogallo
+
 Gabrielle Maxey: @GabrielleM45
+
 Jake Haberle: @jhaberle
+
 Metasabeya Ketsela: @metasabeya
+
 Keldan Cundy: @keldykins
 
 ## License
