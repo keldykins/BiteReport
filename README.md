@@ -10,8 +10,9 @@ https://bitereport.herokuapp.com/
 
 ## Authors:
 
+Claudion Gallo
 ![](http://i.imgur.com/9I6NRUm.png)
-Claudion Gallo: @mrclaudiogallo
+@mrclaudiogallo
 
 Gabrielle Maxey: @GabrielleM45
 
