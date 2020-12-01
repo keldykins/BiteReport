@@ -10,7 +10,7 @@ https://bitereport.herokuapp.com/
 
 ## Authors:
 
-Claudion Gallo
+Claudio Gallo
 
 ![](http://i.imgur.com/9I6NRUm.png)
 [mrclaudiogallo](http://github.com/mrclaudiogallo)
