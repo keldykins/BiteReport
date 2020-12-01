@@ -14,13 +14,21 @@ Claudion Gallo
 ![](http://i.imgur.com/9I6NRUm.png)
 @mrclaudiogallo
 
-Gabrielle Maxey: @GabrielleM45
+Gabrielle Maxey
+![](http://i.imgur.com/9I6NRUm.png)
+@GabrielleM45
 
-Jake Haberle: @jhaberle
+Jake Haberle
+![](http://i.imgur.com/9I6NRUm.png)
+@jhaberle
 
-Metasabeya Ketsela: @metasabeya
+Metasabeya Ketsela
+![](http://i.imgur.com/9I6NRUm.png)
+@metasabeya
 
-Keldan Cundy: @keldykins
+Keldan Cundy
+![](http://i.imgur.com/9I6NRUm.png)
+@keldykins
 
 ## License
   
