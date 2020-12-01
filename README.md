@@ -12,23 +12,23 @@ https://bitereport.herokuapp.com/
 
 Claudion Gallo
 ![](http://i.imgur.com/9I6NRUm.png)
-@mrclaudiogallo
+[mrclaudiogallo](http://github.com/mrclaudiogallo)
 
 Gabrielle Maxey
 ![](http://i.imgur.com/9I6NRUm.png)
-@GabrielleM45
+[GabrielleM45](http://github.com/GabrielleM45)
 
 Jake Haberle
 ![](http://i.imgur.com/9I6NRUm.png)
-@jhaberle
+[jhaberle](http://github.com/jhaberle)
 
 Metasabeya Ketsela
 ![](http://i.imgur.com/9I6NRUm.png)
-@metasabeya
+[metasabeya](http://github.com/metasabeya)
 
 Keldan Cundy
 ![](http://i.imgur.com/9I6NRUm.png)
-@keldykins
+[keldykins](http://github.com/keldykins)
 
 ## License
   
