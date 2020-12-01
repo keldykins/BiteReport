@@ -6,10 +6,17 @@ App for leaving reviews regarding a restaurant and its menu items.
 
 ## Usage
 
-## Authors:
-Claudion Gallo, Jake Haberle, Metasabeya Ketsela, Keldan Cundy, Gabrielle Maxey
+https://bitereport.herokuapp.com/
 
-![](http://i.imgur.com/9I6NRUm.png): mrclaudiogallo GabrielleM45 jhaberle metasabeya keldykins>
+## Authors:
+Jake Haberle, Metasabeya Ketsela, Keldan Cundy, Gabrielle Maxey
+
+![](http://i.imgur.com/9I6NRUm.png)
+Claudion Gallo: @mrclaudiogallo
+Gabrielle Maxey: @GabrielleM45
+Jake Haberle: @jhaberle
+Metasabeya Ketsela: @metasabeya
+Keldan Cundy: @keldykins
 
 ## License
   
@@ -21,3 +28,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+## Screenshots
+
+<img width="1266" alt="Screen Shot 2020-12-01 at 12 22 12 PM" src="https://user-images.githubusercontent.com/66789135/100786801-e3eae100-33cf-11eb-9712-9df888aea569.png">
